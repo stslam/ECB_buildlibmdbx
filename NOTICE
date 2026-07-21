@@ -1,0 +1,28 @@
+BCB_buildlibmdbx
+Copyright 2026 stslam
+
+This repository contains build tooling, source patches, and pre-built
+binaries for using libmdbx with Embarcadero RAD Studio / C++ Builder
+(bcc32c / bcc64x, tested with RAD Studio 13.1).
+
+It does NOT contain a copy of the libmdbx source tree. The patches/
+directory contains unified diffs meant to be applied on top of:
+
+    https://github.com/stslam/libmdbx_embarcadero (branch: work_on)
+
+which is itself a fork tracking:
+
+    libmdbx (aka MDBX) — an extremely fast, compact, powerful, embeddable,
+    transactional key-value storage engine.
+    Copyright 2015-2026 Леонид Юрьев (Leonid Yuriev) <leo@yuriev.ru>
+    SPDX-License-Identifier: Apache-2.0
+    Origin / primary source: https://sourcecraft.dev/dqdkfa/libmdbx
+    Documentation: https://libmdbx.dqdkfa.ru
+
+Pre-built binaries under bin/ are compiled from the above source plus
+the patches in patches/, using the scripts in build/. They are provided
+as a convenience for Embarcadero users and carry the same Apache-2.0
+license as libmdbx itself. See LICENSE for the full license text.
+
+This is an unofficial, community-maintained build; it is not affiliated
+with, endorsed by, or supported by the libmdbx maintainer.

@@ -1,0 +1,13 @@
+====================================
+Building Win64 Configuration: Release
+Flags: -O3 -finline-functions -DNDEBUG
+====================================
+Embarcadero C++ 7.80 for Win64/COFF Copyright (c) 2012-2026 Embarcadero Technologies, Inc.
+
+E:\NewQDB\PLAYGROUND\LIBMDBX_MASTER\libmdbx-master\libmdbx-master>"C:\Program Files (x86)\Embarcadero\Studio\37.0\bin64\bcc64x.exe" -c -I. -O3 -finline-functions -DNDEBUG -DMDBX_WITHOUT_MSVC_CRT=1 -DMDBX_BUILD_CXX=1 -DMDBX_BUILD_SHARED_LIBRARY=0 -DMDBX_MANUAL_MODULE_HANDLER=0 -DMDBX_BUILD_FLAGS="\"bcc64x Win64 Release\"" "E:\NewQDB\PLAYGROUND\LIBMDBX_MASTER\libmdbx-master\libmdbx-master\mdbx.c++" -o "E:\NewQDB\PLAYGROUND\LIBMDBX_MASTER\libmdbx-master\libmdbx-master\OUT\Win64\Release\TEMP\mdbxpp.o" 
+Embarcadero C++ 7.80 for Win64/COFF Copyright (c) 2012-2026 Embarcadero Technologies, Inc.
+
+E:\NewQDB\PLAYGROUND\LIBMDBX_MASTER\libmdbx-master\libmdbx-master>echo Creating 64-bit library mdbx.lib... 
+Creating 64-bit library mdbx.lib...
+
+E:\NewQDB\PLAYGROUND\LIBMDBX_MASTER\libmdbx-master\libmdbx-master>"C:\Program Files (x86)\Embarcadero\Studio\37.0\bin64\llvm-lib.exe" /OUT:"E:\NewQDB\PLAYGROUND\LIBMDBX_MASTER\libmdbx-master\libmdbx-master\OUT\Win64\Release\LIB\mdbx.lib" "E:\NewQDB\PLAYGROUND\LIBMDBX_MASTER\libmdbx-master\libmdbx-master\OUT\Win64\Release\TEMP\mdbx.o" "E:\NewQDB\PLAYGROUND\LIBMDBX_MASTER\libmdbx-master\libmdbx-master\OUT\Win64\Release\TEMP\mdbxpp.o" 

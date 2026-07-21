@@ -1,0 +1,18 @@
+# Build artifacts / intermediates - only final .lib in bin/ is tracked
+*.obj
+*.o
+*.bak
+*.tds
+*.map
+*.ilc
+*.ild
+*.ilf
+*.ils
+build.log
+OUT/
+TEMP/
+
+# Editor / OS cruft
+.vs/
+.vscode/
+Thumbs.db

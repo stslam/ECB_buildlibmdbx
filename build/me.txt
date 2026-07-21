@@ -1,0 +1,13 @@
+make release mdbxlib win32 with logfile
+mk_rd.bat > build.log 2>&1
+make release mdbxlib win32 with logfile
+mk_rd.bat release> build.log 2>&1
+make debug mdbxlib win32 with logfile
+mk_rd.bat debug> build.log 2>&1
+
+make release mdbxlib win64 with logfile
+mk_rd64.bat > build.log 2>&1
+make release mdbxlib win64 with logfile
+mk_rd64.bat release> build.log 2>&1
+make debug mdbxlib win64 with logfile
+mk_rd64.bat debug> build.log 2>&1
