@@ -1,7 +1,7 @@
-diff --git a/mdbx-internals.h b/mdbx-internals.h
-index bfba9b6..93aec70 100644
---- a/mdbx-internals.h
-+++ b/mdbx-internals.h
+diff --git "a/mdbx-internals.h" "b/mdbx-internals.h"
+index bfba9b6..0003e7d 100644
+--- "a/mdbx-internals.h"
++++ "b/mdbx-internals.h"
 @@ -451,7 +451,7 @@ __extern_C key_t ftok(const char *, int);
  #include <io.h>
  #include <tlhelp32.h>
@@ -11,21 +11,28 @@ index bfba9b6..93aec70 100644
  /* Embarcadero intrin.h does not define YieldProcessor; provide it via inline asm */
  #define YieldProcessor() __asm__ __volatile__("pause")
  #endif /* __CODEGEARC__ */
-@@ -2448,7 +2448,7 @@ typedef union {
+@@ -2447,23 +2447,15 @@ typedef enum mdbx_memory_order {
+ typedef union {
    volatile uint32_t weak;
  #ifdef MDBX_HAVE_C11ATOMICS
- #if defined(__CODEGEARC__) && defined(__clang__)
+-#if defined(__CODEGEARC__) && defined(__clang__)
 -  volatile atomic_uint32_t c11a;
+-#else
+-  volatile _Atomic uint32_t c11a;
+-#endif
 +  volatile atomic_uint_least32_t c11a;
- #else
-   volatile _Atomic uint32_t c11a;
- #endif
-@@ -2459,7 +2459,7 @@ typedef union {
+ #endif /* MDBX_HAVE_C11ATOMICS */
+ } mdbx_atomic_uint32_t;
+ 
+ typedef union {
    volatile uint64_t weak;
  #if defined(MDBX_HAVE_C11ATOMICS) && (MDBX_64BIT_CAS || MDBX_64BIT_ATOMIC)
- #if defined(__CODEGEARC__) && defined(__clang__)
+-#if defined(__CODEGEARC__) && defined(__clang__)
 -  volatile atomic_uint64_t c11a;
-+  volatile atomic_uint_least64_t c11a;
- #else
+-#else
    volatile _Atomic uint64_t c11a;
  #endif
+-#endif
+ #if !defined(MDBX_HAVE_C11ATOMICS) || !MDBX_64BIT_CAS || !MDBX_64BIT_ATOMIC
+   __anonymous_struct_extension__ struct {
+ #if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__

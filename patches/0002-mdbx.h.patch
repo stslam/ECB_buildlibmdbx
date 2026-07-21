@@ -1,7 +1,7 @@
-diff --git a/mdbx.h b/mdbx.h
+diff --git "a/mdbx.h" "b/mdbx.h"
 index 3bd31a1..04e0f44 100644
---- a/mdbx.h
-+++ b/mdbx.h
+--- "a/mdbx.h"
++++ "b/mdbx.h"
 @@ -167,6 +167,12 @@ as a duplicates or as like a multiple values corresponds to keys.
  #if defined(_WIN32) || defined(_WIN64)
  #include <windows.h>
